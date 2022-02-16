@@ -8,10 +8,11 @@ import { Navbar } from './Components/Navbar';
 import { Post } from './Components/Page/Post';
 import Dashboard from './Components/Page/Dashboard';
 import Login from './Components/Page/Login';
+import Logout from './Components/Page/Logout';
 
 function App() {
 
-  const [isLogged, setIsLogged] = useState(false);
+  const [isLogged, setIsLogged] = useState(true);
   let data = {
     st : 'User not logged in'
   }
@@ -25,6 +26,7 @@ function App() {
           <Route path='/contact' element={<Contact />} />
           <Route path='/post/:category/:id' element={<Post />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/logout' element={ <Logout /> } />
           <Route path='/dashboard' element={isLogged ? <Dashboard /> : <Navigate to='/login' state={data} replace /> } />
           <Route path='*' element={<h1 style={{ textAlign: 'center' }}>Error 404 Page not Found</h1>} />
         </Routes>

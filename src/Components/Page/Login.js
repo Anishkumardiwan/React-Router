@@ -6,7 +6,7 @@ const Login = () => {
     return (
         <>
             <h1 style={{textAlign:'center'}}>Login Page</h1>
-            <h2 style={{textAlign:'center'}}>{location.state.st}</h2>
+            <h2 style={{float:'center'}}>{location.state.st}</h2>
         </>
     )
 }
